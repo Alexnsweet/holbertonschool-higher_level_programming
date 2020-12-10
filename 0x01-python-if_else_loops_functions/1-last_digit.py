@@ -5,7 +5,7 @@ number = random.randint(-10000, 10000)
 if number >= 0:
     ldig = number % 10
 else:
-    ldig = (number % -10) * -1
+    ldig = number % -10
 
 if ldig == 0:
     suffix = "and is 0"
