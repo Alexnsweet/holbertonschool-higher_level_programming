@@ -13,7 +13,7 @@ class Square:
         """
         Initializes private attribute size
         """
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -27,12 +27,11 @@ class Square:
         """
             Setter to initialize value
         """
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError('size must be an integer')
-        if size < 0:
+        if value < 0:
             raise ValueError('size must be >= 0')
-
-        self.__size = size
+        self.__size = value
 
     def area(self):
         """
